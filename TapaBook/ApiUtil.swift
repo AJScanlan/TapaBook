@@ -69,5 +69,55 @@ class ApiUtil {
         task.resume()
     
     }
+    
+    static func retrieveBookDescription(viewController: BookDetailVC, book: Book) {
+    
+        guard let url = URL(string: ENDPOINT + "book/\(book.id)") else {
+            print("Error creating URL")
+            return
+        }
+        
+        let urlRequest = URLRequest(url: url)
+        let session = URLSession.shared
+        
+        let task = session.dataTask(with: urlRequest) {
+            
+            (data, response, error) in
+            
+            guard error == nil else {
+                print("Error retrieving description")
+                print(error)
+                return
+            }
+            
+            guard let responseData = data else {
+                print("Error: did not receive data from \(urlRequest)")
+                return
+            }
+            
+            do {
+                
+                guard let bookJSON = try JSONSerialization.jsonObject(with: responseData, options: []) as? [String: Any] else {
+                    print("Error serialising JSON")
+                    return
+                }
+                
+                // Running on UI thread because of weird exception
+                DispatchQueue.main.async {
+                    viewController.outletDescription.text = bookJSON["description"] as? String
+                }
+                
+                return
+                
+            } catch  {
+                print("error trying to convert data to JSON")
+                return
+            }
+            
+        }
+        
+        task.resume()
+    
+    }
 
 }

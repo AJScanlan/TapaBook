@@ -59,14 +59,25 @@ class BookTableVC: UITableViewController {
         return UITableViewAutomaticDimension
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "ShowBookDetail" {
+            let bookDetailVC = segue.destination as! BookDetailVC
+            
+            if let selectedBookCell = sender as? BookTableViewCell {
+            
+                let indexPath = tableView.indexPath(for: selectedBookCell)!
+                let selectedBook = books[indexPath.row]
+                
+                bookDetailVC.book = selectedBook
+            }
+        
+        }
+    
     }
-    */
 
 }

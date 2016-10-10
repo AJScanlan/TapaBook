@@ -16,6 +16,7 @@
 		FA5D81AF1DAB9B9C00BAE443 /* BookTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81AE1DAB9B9C00BAE443 /* BookTableVC.swift */; };
 		FA5D81B31DAB9E0000BAE443 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81B21DAB9E0000BAE443 /* BookTableViewCell.swift */; };
 		FA5D81B61DABA6C400BAE443 /* ApiUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81B51DABA6C400BAE443 /* ApiUtil.swift */; };
+		FAEAAE2E1DABD4BD003D1640 /* BookDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEAAE2D1DABD4BD003D1640 /* BookDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		FA5D81AE1DAB9B9C00BAE443 /* BookTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableVC.swift; sourceTree = "<group>"; };
 		FA5D81B21DAB9E0000BAE443 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		FA5D81B51DABA6C400BAE443 /* ApiUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUtil.swift; sourceTree = "<group>"; };
+		FAEAAE2D1DABD4BD003D1640 /* BookDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				FA5D81AE1DAB9B9C00BAE443 /* BookTableVC.swift */,
+				FAEAAE2D1DABD4BD003D1640 /* BookDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				FA5D818C1DAB933900BAE443 /* AppDelegate.swift in Sources */,
 				FA5D81AF1DAB9B9C00BAE443 /* BookTableVC.swift in Sources */,
 				FA5D81AD1DAB969D00BAE443 /* Book.swift in Sources */,
+				FAEAAE2E1DABD4BD003D1640 /* BookDetailVC.swift in Sources */,
 				FA5D81B61DABA6C400BAE443 /* ApiUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +458,7 @@
 				FA5D81A71DAB933A00BAE443 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA5D81A81DAB933A00BAE443 /* Build configuration list for PBXNativeTarget "TapaBookTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +467,7 @@
 				FA5D81AA1DAB933A00BAE443 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
