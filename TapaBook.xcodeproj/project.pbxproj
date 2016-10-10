@@ -13,6 +13,7 @@
 		FA5D81931DAB933A00BAE443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5D81921DAB933A00BAE443 /* Assets.xcassets */; };
 		FA5D81961DAB933A00BAE443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5D81941DAB933A00BAE443 /* LaunchScreen.storyboard */; };
 		FA5D81A11DAB933A00BAE443 /* TapaBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81A01DAB933A00BAE443 /* TapaBookTests.swift */; };
+		FA5D81AD1DAB969D00BAE443 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81AC1DAB969D00BAE443 /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		FA5D819C1DAB933A00BAE443 /* TapaBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapaBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5D81A01DAB933A00BAE443 /* TapaBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapaBookTests.swift; sourceTree = "<group>"; };
 		FA5D81A21DAB933A00BAE443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA5D81AC1DAB969D00BAE443 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		FA5D818A1DAB933900BAE443 /* TapaBook */ = {
 			isa = PBXGroup;
 			children = (
+				FA5D81AB1DAB965C00BAE443 /* Model */,
 				FA5D818B1DAB933900BAE443 /* AppDelegate.swift */,
 				FA5D818D1DAB933900BAE443 /* ViewController.swift */,
 				FA5D818F1DAB933A00BAE443 /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				FA5D81A21DAB933A00BAE443 /* Info.plist */,
 			);
 			path = TapaBookTests;
+			sourceTree = "<group>";
+		};
+		FA5D81AB1DAB965C00BAE443 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D81AC1DAB969D00BAE443 /* Book.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +214,7 @@
 			files = (
 				FA5D818E1DAB933900BAE443 /* ViewController.swift in Sources */,
 				FA5D818C1DAB933900BAE443 /* AppDelegate.swift in Sources */,
+				FA5D81AD1DAB969D00BAE443 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
