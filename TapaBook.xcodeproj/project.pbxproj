@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA5D818C1DAB933900BAE443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D818B1DAB933900BAE443 /* AppDelegate.swift */; };
+		FA5D818E1DAB933900BAE443 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D818D1DAB933900BAE443 /* ViewController.swift */; };
+		FA5D81911DAB933A00BAE443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5D818F1DAB933A00BAE443 /* Main.storyboard */; };
+		FA5D81931DAB933A00BAE443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5D81921DAB933A00BAE443 /* Assets.xcassets */; };
+		FA5D81961DAB933A00BAE443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5D81941DAB933A00BAE443 /* LaunchScreen.storyboard */; };
+		FA5D81A11DAB933A00BAE443 /* TapaBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81A01DAB933A00BAE443 /* TapaBookTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA5D819D1DAB933A00BAE443 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA5D81801DAB933900BAE443 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA5D81871DAB933900BAE443;
+			remoteInfo = TapaBook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA5D81881DAB933900BAE443 /* TapaBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapaBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5D818B1DAB933900BAE443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA5D818D1DAB933900BAE443 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA5D81901DAB933A00BAE443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA5D81921DAB933A00BAE443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA5D81951DAB933A00BAE443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA5D81971DAB933A00BAE443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA5D819C1DAB933A00BAE443 /* TapaBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapaBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5D81A01DAB933A00BAE443 /* TapaBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapaBookTests.swift; sourceTree = "<group>"; };
+		FA5D81A21DAB933A00BAE443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA5D81851DAB933900BAE443 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA5D81991DAB933A00BAE443 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA5D817F1DAB933900BAE443 = {
+			isa = PBXGroup;
+			children = (
+				FA5D818A1DAB933900BAE443 /* TapaBook */,
+				FA5D819F1DAB933A00BAE443 /* TapaBookTests */,
+				FA5D81891DAB933900BAE443 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA5D81891DAB933900BAE443 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D81881DAB933900BAE443 /* TapaBook.app */,
+				FA5D819C1DAB933A00BAE443 /* TapaBookTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA5D818A1DAB933900BAE443 /* TapaBook */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D818B1DAB933900BAE443 /* AppDelegate.swift */,
+				FA5D818D1DAB933900BAE443 /* ViewController.swift */,
+				FA5D818F1DAB933A00BAE443 /* Main.storyboard */,
+				FA5D81921DAB933A00BAE443 /* Assets.xcassets */,
+				FA5D81941DAB933A00BAE443 /* LaunchScreen.storyboard */,
+				FA5D81971DAB933A00BAE443 /* Info.plist */,
+			);
+			path = TapaBook;
+			sourceTree = "<group>";
+		};
+		FA5D819F1DAB933A00BAE443 /* TapaBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D81A01DAB933A00BAE443 /* TapaBookTests.swift */,
+				FA5D81A21DAB933A00BAE443 /* Info.plist */,
+			);
+			path = TapaBookTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA5D81871DAB933900BAE443 /* TapaBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA5D81A51DAB933A00BAE443 /* Build configuration list for PBXNativeTarget "TapaBook" */;
+			buildPhases = (
+				FA5D81841DAB933900BAE443 /* Sources */,
+				FA5D81851DAB933900BAE443 /* Frameworks */,
+				FA5D81861DAB933900BAE443 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TapaBook;
+			productName = TapaBook;
+			productReference = FA5D81881DAB933900BAE443 /* TapaBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA5D819B1DAB933A00BAE443 /* TapaBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA5D81A81DAB933A00BAE443 /* Build configuration list for PBXNativeTarget "TapaBookTests" */;
+			buildPhases = (
+				FA5D81981DAB933A00BAE443 /* Sources */,
+				FA5D81991DAB933A00BAE443 /* Frameworks */,
+				FA5D819A1DAB933A00BAE443 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA5D819E1DAB933A00BAE443 /* PBXTargetDependency */,
+			);
+			name = TapaBookTests;
+			productName = TapaBookTests;
+			productReference = FA5D819C1DAB933A00BAE443 /* TapaBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA5D81801DAB933900BAE443 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Alexander Scanlan";
+				TargetAttributes = {
+					FA5D81871DAB933900BAE443 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B757SM62F4;
+						ProvisioningStyle = Automatic;
+					};
+					FA5D819B1DAB933A00BAE443 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B757SM62F4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FA5D81871DAB933900BAE443;
+					};
+				};
+			};
+			buildConfigurationList = FA5D81831DAB933900BAE443 /* Build configuration list for PBXProject "TapaBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FA5D817F1DAB933900BAE443;
+			productRefGroup = FA5D81891DAB933900BAE443 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA5D81871DAB933900BAE443 /* TapaBook */,
+				FA5D819B1DAB933A00BAE443 /* TapaBookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA5D81861DAB933900BAE443 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA5D81961DAB933A00BAE443 /* LaunchScreen.storyboard in Resources */,
+				FA5D81931DAB933A00BAE443 /* Assets.xcassets in Resources */,
+				FA5D81911DAB933A00BAE443 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA5D819A1DAB933A00BAE443 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA5D81841DAB933900BAE443 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA5D818E1DAB933900BAE443 /* ViewController.swift in Sources */,
+				FA5D818C1DAB933900BAE443 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA5D81981DAB933A00BAE443 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA5D81A11DAB933A00BAE443 /* TapaBookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA5D819E1DAB933A00BAE443 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA5D81871DAB933900BAE443 /* TapaBook */;
+			targetProxy = FA5D819D1DAB933A00BAE443 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA5D818F1DAB933A00BAE443 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA5D81901DAB933A00BAE443 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA5D81941DAB933A00BAE443 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA5D81951DAB933A00BAE443 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA5D81A31DAB933A00BAE443 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA5D81A41DAB933A00BAE443 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA5D81A61DAB933A00BAE443 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B757SM62F4;
+				INFOPLIST_FILE = TapaBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ie.ajax.TapaBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FA5D81A71DAB933A00BAE443 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B757SM62F4;
+				INFOPLIST_FILE = TapaBook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ie.ajax.TapaBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		FA5D81A91DAB933A00BAE443 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = B757SM62F4;
+				INFOPLIST_FILE = TapaBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ie.ajax.TapaBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TapaBook.app/TapaBook";
+			};
+			name = Debug;
+		};
+		FA5D81AA1DAB933A00BAE443 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = B757SM62F4;
+				INFOPLIST_FILE = TapaBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ie.ajax.TapaBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TapaBook.app/TapaBook";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA5D81831DAB933900BAE443 /* Build configuration list for PBXProject "TapaBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA5D81A31DAB933A00BAE443 /* Debug */,
+				FA5D81A41DAB933A00BAE443 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA5D81A51DAB933A00BAE443 /* Build configuration list for PBXNativeTarget "TapaBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA5D81A61DAB933A00BAE443 /* Debug */,
+				FA5D81A71DAB933A00BAE443 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FA5D81A81DAB933A00BAE443 /* Build configuration list for PBXNativeTarget "TapaBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA5D81A91DAB933A00BAE443 /* Debug */,
+				FA5D81AA1DAB933A00BAE443 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FA5D81801DAB933900BAE443 /* Project object */;
+}
