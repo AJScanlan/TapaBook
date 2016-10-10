@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XMR-8R-J22">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7m1-I5-5Al">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -10,7 +10,7 @@
         <!--Books-->
         <scene sceneID="YOH-CF-bug">
             <objects>
-                <tableViewController id="2jf-z4-UgG" customClass="BookTableVC" customModule="TapaBook" sceneMemberID="viewController">
+                <tableViewController id="2jf-z4-UgG" customClass="BookMasterVC" customModule="TapaBook" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qrm-gs-oY9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                     <frame key="frameInset" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwr-vi-Rsz">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwr-vi-Rsz">
                                             <frame key="frameInset" minX="8" minY="8" width="52" height="21"/>
                                             <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.79676418439716312" colorSpace="calibratedRGB"/>
@@ -36,7 +36,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ops-l5-UFl">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ops-l5-UFl">
                                             <frame key="frameInset" minX="325" minY="8" width="39" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -47,6 +47,7 @@
                                         <constraint firstItem="Uwr-vi-Rsz" firstAttribute="top" secondItem="Zss-z0-xGR" secondAttribute="topMargin" constant="8" id="2BQ-Tr-1d2"/>
                                         <constraint firstItem="DOk-jp-aC4" firstAttribute="top" secondItem="Uwr-vi-Rsz" secondAttribute="bottom" constant="8" id="4Ds-yF-yWR"/>
                                         <constraint firstItem="DOk-jp-aC4" firstAttribute="top" secondItem="Ops-l5-UFl" secondAttribute="bottom" constant="8" id="Aqn-Gl-UlI"/>
+                                        <constraint firstItem="Ops-l5-UFl" firstAttribute="leading" secondItem="Uwr-vi-Rsz" secondAttribute="trailing" constant="8" id="KEq-2k-N5Q"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="DOk-jp-aC4" secondAttribute="bottom" constant="8" id="Ktv-6O-rDL"/>
                                         <constraint firstItem="Uwr-vi-Rsz" firstAttribute="leading" secondItem="Zss-z0-xGR" secondAttribute="leadingMargin" constant="8" id="L4G-qY-HeH"/>
                                         <constraint firstItem="Ops-l5-UFl" firstAttribute="top" secondItem="Zss-z0-xGR" secondAttribute="topMargin" constant="8" id="rBW-16-wns"/>
@@ -59,7 +60,6 @@
                                     <outlet property="outletAuthor" destination="Uwr-vi-Rsz" id="BEJ-Pq-m2C"/>
                                     <outlet property="outletPrice" destination="Ops-l5-UFl" id="of9-Qz-oY2"/>
                                     <outlet property="outletTitle" destination="DOk-jp-aC4" id="p95-9s-cQJ"/>
-                                    <segue destination="RpK-ya-HhS" kind="show" identifier="ShowBookDetail" id="ipQ-H2-bg9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -72,7 +72,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aYF-vu-TdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="322"/>
+            <point key="canvasLocation" x="2130" y="379"/>
         </scene>
         <!--Book DetailVC-->
         <scene sceneID="FUw-nF-Wfy">
@@ -156,7 +156,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ly-bq-b6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2060" y="321.58920539730138"/>
+            <point key="canvasLocation" x="1084" y="1631"/>
+        </scene>
+        <!--Book SplitVC-->
+        <scene sceneID="LuG-qC-HDx">
+            <objects>
+                <splitViewController id="7m1-I5-5Al" customClass="BookSplitVC" customModule="TapaBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="XMR-8R-J22" kind="relationship" relationship="masterViewController" id="5CM-EE-Iu9"/>
+                        <segue destination="RpK-ya-HhS" kind="relationship" relationship="detailViewController" id="8hh-wM-RSJ"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oaz-Oy-Rey" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="1293"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qnm-SD-OVb">
@@ -172,7 +185,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSN-Gm-T4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39" y="322"/>
+            <point key="canvasLocation" x="1084" y="379"/>
         </scene>
     </scenes>
 </document>

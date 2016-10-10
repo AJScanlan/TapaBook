@@ -13,9 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let splitViewController = self.window!.rootViewController as! BookSplitVC
+        let leftNavController = splitViewController.viewControllers.first as! UINavigationController
+        let masterViewController = leftNavController.topViewController as! BookMasterVC
+        let detailViewController = splitViewController.viewControllers.last as! BookDetailVC
+        
+        masterViewController.delegate = detailViewController
+        
         return true
     }
 
@@ -40,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 

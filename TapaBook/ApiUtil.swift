@@ -12,7 +12,7 @@ class ApiUtil {
     
     static let ENDPOINT = "http://tpbookserver.herokuapp.com/"
     
-    static func retrieveBookList(viewController: BookTableVC) {
+    static func retrieveBookList(viewController: BookMasterVC) {
     
         guard let url = URL(string: ENDPOINT + "books") else {
             print("Error creating URL")
@@ -70,6 +70,7 @@ class ApiUtil {
     
     }
     
+    // TODO: Cancel if screen is navigated away from? i should just cache these
     static func retrieveBookDescription(viewController: BookDetailVC, book: Book) {
     
         guard let url = URL(string: ENDPOINT + "book/\(book.id)") else {
@@ -105,6 +106,12 @@ class ApiUtil {
                 // Running on UI thread because of weird exception
                 DispatchQueue.main.async {
                     viewController.outletDescription.text = bookJSON["description"] as? String
+                    
+                    if let description = bookJSON["description"] as? String {
+                        viewController.outletDescription.text = description
+                    } else {
+                        viewController.outletDescription.text = "Error loading description"
+                    }
                 }
                 
                 return

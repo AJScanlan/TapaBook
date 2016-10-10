@@ -8,14 +8,21 @@
 
 import UIKit
 
-class BookTableVC: UITableViewController {
+protocol BookSelectionDelegate: class {
+    func bookSelected(newBook: Book)
+}
+
+class BookMasterVC: UITableViewController {
     
     // MARK: Properties
     var books = [Book]() {
-        didSet{
+        didSet {
             self.tableView.reloadData()
+            self.delegate?.bookSelected(newBook: self.books.first!)
         }
     }
+    
+    weak var delegate: BookSelectionDelegate?
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -58,26 +65,13 @@ class BookTableVC: UITableViewController {
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-
     
-    // MARK: Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedBook = self.books[indexPath.row]
+        self.delegate?.bookSelected(newBook: selectedBook)
         
-        if segue.identifier == "ShowBookDetail" {
-            let bookDetailVC = segue.destination as! BookDetailVC
-            
-            if let selectedBookCell = sender as? BookTableViewCell {
-            
-                let indexPath = tableView.indexPath(for: selectedBookCell)!
-                let selectedBook = books[indexPath.row]
-                
-                bookDetailVC.book = selectedBook
-            }
-        
+        if let bookDetailVC = self.delegate as? BookDetailVC {
+            splitViewController?.showDetailViewController(bookDetailVC, sender: nil)
         }
-    
     }
-
 }

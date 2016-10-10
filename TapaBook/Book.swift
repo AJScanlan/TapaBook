@@ -12,8 +12,7 @@ class Book {
     var id: Int
     var title: String
     var isbn: String
-    var price: Int
-    var currencyCode: ISOCurrencyCode
+    var price: String
     var author: String
     
     // Mark: Initialisers
@@ -23,8 +22,8 @@ class Book {
             let id = dict["id"] as? Int,
             let title = dict["title"] as? String,
             let isbn = dict["isbn"] as? String,
-            let price = dict["price"] as? Int,
-            let author = dict["author"] as? String
+            let author = dict["author"] as? String,
+            let price = ParseUtil.formatPrice(dict: dict)
         
         else {
             print("error parsing JSON in Book initialiser")
@@ -35,14 +34,8 @@ class Book {
         self.title = title
         self.isbn = isbn
         self.price = price
-        self.currencyCode = ISOCurrencyCode.EUR
         self.author = author
         
     }
-
-}
-
-// Enum to hold the ISO currency codes which can be found here: https://en.wikipedia.org/wiki/ISO_4217
-enum ISOCurrencyCode {
-    case EUR, GBP, USD
+    
 }

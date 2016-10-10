@@ -17,13 +17,21 @@ class BookDetailVC: UIViewController {
     @IBOutlet weak var outletISBN: UILabel!
     @IBOutlet weak var outletDescription: UITextView!
     
-    var book: Book?
+    var book: Book? {
+        didSet {
+            self.refresh()
+        }
+    }
 
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        outletDescription.text = "Loading..."
+    }
+    
+    func refresh() {
         
         if let book = book {
             ApiUtil.retrieveBookDescription(viewController: self, book: book)
@@ -34,5 +42,11 @@ class BookDetailVC: UIViewController {
             outletISBN.text = book.isbn
         }
     }
+}
 
+extension BookDetailVC: BookSelectionDelegate {
+    func bookSelected(newBook: Book) {
+        book = newBook
+        outletDescription.text = "Loading..."
+    }
 }
