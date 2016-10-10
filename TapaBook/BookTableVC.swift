@@ -27,7 +27,7 @@ class BookTableVC: UITableViewController {
         ApiUtil.retrieveBookList(viewController: self)
     }
 
-    // MARK: - Table view data source
+    // MARK: Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -48,9 +48,15 @@ class BookTableVC: UITableViewController {
         cell.outletPrice.text = String(book.price)
         cell.outletTitle.text = book.title
         
-        cell.layoutIfNeeded()
-        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 
     /*
