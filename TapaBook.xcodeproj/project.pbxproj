@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		FA5D818C1DAB933900BAE443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D818B1DAB933900BAE443 /* AppDelegate.swift */; };
-		FA5D818E1DAB933900BAE443 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D818D1DAB933900BAE443 /* ViewController.swift */; };
 		FA5D81911DAB933A00BAE443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5D818F1DAB933A00BAE443 /* Main.storyboard */; };
 		FA5D81931DAB933A00BAE443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5D81921DAB933A00BAE443 /* Assets.xcassets */; };
 		FA5D81961DAB933A00BAE443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5D81941DAB933A00BAE443 /* LaunchScreen.storyboard */; };
 		FA5D81A11DAB933A00BAE443 /* TapaBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81A01DAB933A00BAE443 /* TapaBookTests.swift */; };
 		FA5D81AD1DAB969D00BAE443 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81AC1DAB969D00BAE443 /* Book.swift */; };
+		FA5D81AF1DAB9B9C00BAE443 /* BookTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81AE1DAB9B9C00BAE443 /* BookTableVC.swift */; };
+		FA5D81B31DAB9E0000BAE443 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81B21DAB9E0000BAE443 /* BookTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +30,6 @@
 /* Begin PBXFileReference section */
 		FA5D81881DAB933900BAE443 /* TapaBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapaBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5D818B1DAB933900BAE443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA5D818D1DAB933900BAE443 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA5D81901DAB933A00BAE443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA5D81921DAB933A00BAE443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5D81951DAB933A00BAE443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +38,8 @@
 		FA5D81A01DAB933A00BAE443 /* TapaBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapaBookTests.swift; sourceTree = "<group>"; };
 		FA5D81A21DAB933A00BAE443 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA5D81AC1DAB969D00BAE443 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		FA5D81AE1DAB9B9C00BAE443 /* BookTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableVC.swift; sourceTree = "<group>"; };
+		FA5D81B21DAB9E0000BAE443 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +81,10 @@
 		FA5D818A1DAB933900BAE443 /* TapaBook */ = {
 			isa = PBXGroup;
 			children = (
+				FA5D81B11DAB9DEA00BAE443 /* View */,
+				FA5D81B01DAB9BEB00BAE443 /* Controller */,
 				FA5D81AB1DAB965C00BAE443 /* Model */,
 				FA5D818B1DAB933900BAE443 /* AppDelegate.swift */,
-				FA5D818D1DAB933900BAE443 /* ViewController.swift */,
 				FA5D818F1DAB933A00BAE443 /* Main.storyboard */,
 				FA5D81921DAB933A00BAE443 /* Assets.xcassets */,
 				FA5D81941DAB933A00BAE443 /* LaunchScreen.storyboard */,
@@ -105,6 +108,22 @@
 				FA5D81AC1DAB969D00BAE443 /* Book.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		FA5D81B01DAB9BEB00BAE443 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D81AE1DAB9B9C00BAE443 /* BookTableVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FA5D81B11DAB9DEA00BAE443 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D81B21DAB9E0000BAE443 /* BookTableViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA5D818E1DAB933900BAE443 /* ViewController.swift in Sources */,
+				FA5D81B31DAB9E0000BAE443 /* BookTableViewCell.swift in Sources */,
 				FA5D818C1DAB933900BAE443 /* AppDelegate.swift in Sources */,
+				FA5D81AF1DAB9B9C00BAE443 /* BookTableVC.swift in Sources */,
 				FA5D81AD1DAB969D00BAE443 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
