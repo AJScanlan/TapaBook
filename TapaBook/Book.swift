@@ -13,22 +13,32 @@ class Book {
     var title: String
     var isbn: String
     var price: Int
-    var currencyCode: ISOCurrencyCode // TODO: Enum
+    var currencyCode: ISOCurrencyCode
     var author: String
     
     // Mark: Initialisers
     init? (_ dict: [String: Any]) {
-    
-        // TODO: Parse JSON
-        self.id = 1
-        self.title = "Title"
-        self.isbn = "ISBN"
-        self.price = 1250
+        
+        guard
+            let id = dict["id"] as? Int,
+            let title = dict["title"] as? String,
+            let isbn = dict["isbn"] as? String,
+            let price = dict["price"] as? Int,
+            let author = dict["author"] as? String
+        
+        else {
+            print("error parsing JSON in Book initialiser")
+            return nil
+        }
+        
+        self.id = id
+        self.title = title
+        self.isbn = isbn
+        self.price = price
         self.currencyCode = ISOCurrencyCode.EUR
-        self.author = "Author"
+        self.author = author
         
     }
-
 
 }
 

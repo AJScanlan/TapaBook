@@ -15,6 +15,7 @@
 		FA5D81AD1DAB969D00BAE443 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81AC1DAB969D00BAE443 /* Book.swift */; };
 		FA5D81AF1DAB9B9C00BAE443 /* BookTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81AE1DAB9B9C00BAE443 /* BookTableVC.swift */; };
 		FA5D81B31DAB9E0000BAE443 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81B21DAB9E0000BAE443 /* BookTableViewCell.swift */; };
+		FA5D81B61DABA6C400BAE443 /* ApiUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5D81B51DABA6C400BAE443 /* ApiUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		FA5D81AC1DAB969D00BAE443 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		FA5D81AE1DAB9B9C00BAE443 /* BookTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableVC.swift; sourceTree = "<group>"; };
 		FA5D81B21DAB9E0000BAE443 /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		FA5D81B51DABA6C400BAE443 /* ApiUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +83,10 @@
 		FA5D818A1DAB933900BAE443 /* TapaBook */ = {
 			isa = PBXGroup;
 			children = (
+				FA5D81B41DABA6B100BAE443 /* Api */,
+				FA5D81AB1DAB965C00BAE443 /* Model */,
 				FA5D81B11DAB9DEA00BAE443 /* View */,
 				FA5D81B01DAB9BEB00BAE443 /* Controller */,
-				FA5D81AB1DAB965C00BAE443 /* Model */,
 				FA5D818B1DAB933900BAE443 /* AppDelegate.swift */,
 				FA5D818F1DAB933A00BAE443 /* Main.storyboard */,
 				FA5D81921DAB933A00BAE443 /* Assets.xcassets */,
@@ -124,6 +127,14 @@
 				FA5D81B21DAB9E0000BAE443 /* BookTableViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		FA5D81B41DABA6B100BAE443 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				FA5D81B51DABA6C400BAE443 /* ApiUtil.swift */,
+			);
+			name = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +246,7 @@
 				FA5D818C1DAB933900BAE443 /* AppDelegate.swift in Sources */,
 				FA5D81AF1DAB9B9C00BAE443 /* BookTableVC.swift in Sources */,
 				FA5D81AD1DAB969D00BAE443 /* Book.swift in Sources */,
+				FA5D81B61DABA6C400BAE443 /* ApiUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
