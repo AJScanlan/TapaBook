@@ -6,13 +6,15 @@
 //  Copyright © 2016 Alexander Scanlan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ApiUtil {
     
     static let ENDPOINT = "http://tpbookserver.herokuapp.com/"
     
     static func retrieveBookList(viewController: BookMasterVC) {
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
     
         guard let url = URL(string: ENDPOINT + "books") else {
             print("Error creating URL")
@@ -25,6 +27,8 @@ class ApiUtil {
         let task = session.dataTask(with: urlRequest) {
             
             (data, response, error) in
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             
             guard error == nil else {
                 print("Error retrieving books")
@@ -72,7 +76,9 @@ class ApiUtil {
     
     // TODO: Cancel if screen is navigated away from? Should i just cache these when the list is retrieved?
     static func retrieveBookDescription(viewController: BookDetailVC, book: Book) {
-    
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        
         guard let url = URL(string: ENDPOINT + "book/\(book.id)") else {
             print("Error creating URL")
             return
@@ -84,6 +90,8 @@ class ApiUtil {
         let task = session.dataTask(with: urlRequest) {
             
             (data, response, error) in
+            
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
             
             guard error == nil else {
                 print("Error retrieving description")
@@ -114,11 +122,8 @@ class ApiUtil {
                     }
                 }
                 
-                return
-                
             } catch  {
                 print("error trying to convert data to JSON")
-                return
             }
             
         }

@@ -12,7 +12,7 @@ protocol BookSelectionDelegate: class {
     func bookSelected(newBook: Book)
 }
 
-// TODO: Reachability notification
+// TODO: Reachability notification. Activity
 class BookMasterVC: UITableViewController {
     
     // MARK: Properties
@@ -21,7 +21,6 @@ class BookMasterVC: UITableViewController {
             DispatchQueue.main.async{
                 self.tableView.reloadData()
                 self.delegate?.bookSelected(newBook: self.books.first!)
-
             }
         }
     }
