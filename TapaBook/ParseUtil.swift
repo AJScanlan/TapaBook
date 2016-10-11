@@ -21,8 +21,31 @@ class ParseUtil {
                 return nil
         }
         
-        return "\(currencyCode) \(price / 100)"
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = NumberFormatter.Style.currency
         
+        switch currencyCode {
+            case "EUR":
+                currencyFormatter.locale = Locale(identifier: "en_IE")
+                break
+            
+            case "GBP":
+                currencyFormatter.locale = Locale(identifier: "en_GB")
+                break
+            
+            case "USD":
+                currencyFormatter.locale = Locale(identifier: "en_US")
+                break
+            
+            default:
+                currencyFormatter.locale = Locale.current
+                break
+            
+        }
+        
+        let priceString = currencyFormatter.string(from: NSNumber(value: (price / 100)))
+        return priceString
     }
 
 }
