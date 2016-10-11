@@ -12,13 +12,17 @@ protocol BookSelectionDelegate: class {
     func bookSelected(newBook: Book)
 }
 
+// TODO: Reachability notification
 class BookMasterVC: UITableViewController {
     
     // MARK: Properties
     var books = [Book]() {
         didSet {
-            self.tableView.reloadData()
-            self.delegate?.bookSelected(newBook: self.books.first!)
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+                self.delegate?.bookSelected(newBook: self.books.first!)
+
+            }
         }
     }
     
@@ -27,9 +31,6 @@ class BookMasterVC: UITableViewController {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
         
         ApiUtil.retrieveBookList(viewController: self)
     }
@@ -58,6 +59,7 @@ class BookMasterVC: UITableViewController {
         return cell
     }
     
+    // MARK: Table view layout
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
@@ -66,6 +68,7 @@ class BookMasterVC: UITableViewController {
         return UITableViewAutomaticDimension
     }
     
+    // MARK: Navigation
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedBook = self.books[indexPath.row]
         self.delegate?.bookSelected(newBook: selectedBook)

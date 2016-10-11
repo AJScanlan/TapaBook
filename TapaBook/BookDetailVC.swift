@@ -11,6 +11,8 @@ import UIKit
 class BookDetailVC: UIViewController {
     
     // MARK: Properties
+    let LOADING = "Loading..."
+    
     @IBOutlet weak var outletTitle: UILabel!
     @IBOutlet weak var outletAuthor: UILabel!
     @IBOutlet weak var outletPrice: UILabel!
@@ -27,10 +29,10 @@ class BookDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        outletDescription.text = "Loading..."
+        outletDescription.text = LOADING
     }
     
+    // MARK: Methods
     func refresh() {
         
         if let book = book {
@@ -44,9 +46,10 @@ class BookDetailVC: UIViewController {
     }
 }
 
+// MARK: Extensions
 extension BookDetailVC: BookSelectionDelegate {
     func bookSelected(newBook: Book) {
         book = newBook
-        outletDescription.text = "Loading..."
+        outletDescription.text = LOADING
     }
 }

@@ -70,7 +70,7 @@ class ApiUtil {
     
     }
     
-    // TODO: Cancel if screen is navigated away from? i should just cache these
+    // TODO: Cancel if screen is navigated away from? Should i just cache these when the list is retrieved?
     static func retrieveBookDescription(viewController: BookDetailVC, book: Book) {
     
         guard let url = URL(string: ENDPOINT + "book/\(book.id)") else {
